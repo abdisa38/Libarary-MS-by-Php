@@ -1,0 +1,138 @@
+========================================
+LIBRARY MANAGEMENT SYSTEM
+Quick Start Guide
+========================================
+
+PROBLEM: Getting "404 Not Found" error?
+This means the project is not in the XAMPP htdocs folder yet.
+
+========================================
+SOLUTION - Follow These Steps:
+========================================
+
+STEP 1: Install Project to XAMPP
+----------------------------------
+1. Double-click this file:
+   → INSTALL_TO_XAMPP.bat
+
+2. Wait for "SUCCESS!" message
+
+3. Note the URL shown in the window
+
+
+STEP 2: Import Database
+----------------------------------
+1. Make sure XAMPP Apache and MySQL are running (green)
+
+2. Open: http://localhost/phpmyadmin
+
+3. Click "New" (left sidebar)
+
+4. Create database:
+   - Name: library_management
+   - Collation: utf8mb4_unicode_ci
+   - Click "Create"
+
+5. Select "library_management" database
+
+6. Click "Import" tab
+
+7. Choose file: database/library.sql
+   (from the project folder in XAMPP htdocs)
+
+8. Click "Go"
+
+9. Wait for success message
+
+
+STEP 3: Access Your System
+----------------------------------
+After installation, use ONE of these URLs:
+
+INSTANT ACCESS (No password needed):
+→ http://localhost/library-ms/auto_login.php
+
+EASY LOGIN (Just username):
+→ http://localhost/library-ms/easy_login.php
+
+REGULAR LOGIN:
+→ http://localhost/library-ms/auth/login.php
+   Username: admin
+   Password: admin123
+
+
+========================================
+TROUBLESHOOTING
+========================================
+
+Problem: INSTALL_TO_XAMPP.bat says "XAMPP not found"
+Solution: 
+- Install XAMPP from https://www.apachefriends.org
+- Or manually copy this folder to C:\xampp\htdocs\
+
+Problem: Still getting 404
+Solution:
+- Check XAMPP Apache is running (green in XAMPP Control Panel)
+- Use correct URL: http://localhost/library-ms/
+- Not: http://localhost/Libarary-MS-by-Php/
+
+Problem: Database error
+Solution:
+- Make sure MySQL is running in XAMPP
+- Import database/library.sql in phpMyAdmin
+- Check database name is: library_management
+
+Problem: Can't import database
+Solution:
+- Database file is at: database/library.sql
+- If in htdocs: C:\xampp\htdocs\library-ms\database\library.sql
+
+========================================
+QUICK REFERENCE
+========================================
+
+Project Location After Install:
+C:\xampp\htdocs\library-ms\
+
+Database Name:
+library_management
+
+Access URLs:
+- Auto Login: http://localhost/library-ms/auto_login.php
+- Easy Login: http://localhost/library-ms/easy_login.php  
+- Dashboard: http://localhost/library-ms/admin/dashboard.php
+- phpMyAdmin: http://localhost/phpmyadmin
+
+Default Credentials:
+- Username: admin
+- Password: admin123
+
+========================================
+NEED HELP?
+========================================
+
+1. Make sure XAMPP is installed
+2. Check Apache and MySQL are running (green)
+3. Verify project is in: C:\xampp\htdocs\library-ms\
+4. Database imported successfully
+5. Try auto_login.php first to test
+
+========================================
+AFTER SUCCESSFUL LOGIN
+========================================
+
+DELETE these files for security:
+- auto_login.php
+- easy_login.php
+- FINAL_FIX.php
+- INSTALL_TO_XAMPP.bat (optional)
+- START_HERE.txt (optional)
+
+Change admin password in:
+Profile → Change Password
+
+========================================
+
+ENJOY YOUR LIBRARY MANAGEMENT SYSTEM! 📚
+
+========================================
