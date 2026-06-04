@@ -1,0 +1,30 @@
+# Uploaded files
+uploads/*
+!uploads/.gitkeep
+
+# Configuration files (if containing sensitive data)
+# config/database.php
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Cache
+cache/
+tmp/
