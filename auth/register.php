@@ -62,8 +62,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $user_id = $userModel->create($data);
             
             if ($user_id) {
-                $_SESSION['message'] = 'Registration successful! Please login.';
-                header('Location: login.php');
+                // Auto-login after successful registration
+                $_SESSION['user_id'] = $user_id;
+                $_SESSION['role'] = 'student'; // New registrations are students
+                $_SESSION['full_name'] = $full_name;
+                $_SESSION['email'] = $email;
+                
+                // Log the activity
+                logActivity($db, $user_id, 'register', 'User registered and auto-logged in');
+                
+                // Redirect to student dashboard
+                header('Location: ../student/dashboard.php');
                 exit();
             } else {
                 $error = 'Registration failed. Please try again.';
